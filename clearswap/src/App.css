@@ -3,32 +3,53 @@
  * 
  * STELLAR HACKATHON SUBMISSION - ClearSwap DeFi Application
  * 
- 
  * DESIGN DECISIONS:
  * - Dark theme for reduced eye strain during trading
  * - Multi-stop gradient for visual depth and interest
  * - Inter font family for excellent readability and modern appearance
  * - Full viewport height ensures proper layout on all devices
  */
+
+/* GLOBAL RESPONSIVE FOUNDATION */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  max-width: 100vw;   /* Never exceed viewport width */
+  margin: 0;
+  padding: 0;
+}
+
 .app {
   min-height: 100vh;
   background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* RESPONSIVE FIXES */
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
-
 
 .landing {
   width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
-
-   /* HERO SECTION - PRIMARY BRAND EXPERIENCE  */
+/* HERO SECTION - PRIMARY BRAND EXPERIENCE */
 .hero-section {
   min-height: 90vh;
   display: flex;
   align-items: center;
   padding: 2rem;
+  /* RESPONSIVE FIXES */
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
 }
+
 .hero-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -36,17 +57,24 @@
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
+  /* RESPONSIVE FIXES */
+  width: 100%;
+  padding: 0 1rem;
 }
+
 .hero-text {
   color: white;
 }
+
 .hero-title {
   font-size: 3.5rem;
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1.5rem;
   color: #ffffff;
+  word-break: break-word; /* Prevent overflow on small screens */
 }
+
 .gradient-text {
   background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
   -webkit-background-clip: text;
@@ -54,16 +82,21 @@
   -webkit-text-fill-color: transparent;
   color: transparent;         
 }
+
 .hero-subtitle {
   font-size: 1.25rem;
   color: #a0a0a0;
   line-height: 1.6;
   margin-bottom: 2rem;
+  word-break: break-word; /* Prevent overflow */
 }
+
 .hero-buttons {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
 }
+
 .primary-btn {
   background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
   border: none;
@@ -78,11 +111,15 @@
   gap: 0.5rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
+  box-sizing: border-box;
+  white-space: nowrap;
 }
+
 .primary-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 25px rgba(0, 212, 255, 0.4);
 }
+
 .secondary-btn {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -96,6 +133,8 @@
   align-items: center;
   gap: 0.5rem;
   transition: all 0.3s ease;
+  box-sizing: border-box;
+  white-space: nowrap;
 }
 
 .secondary-btn:hover {
@@ -115,7 +154,9 @@
   border-radius: 20px;
   padding: 2rem;
   width: 300px;
+  max-width: 100%; /* Responsive width */
   animation: float 6s ease-in-out infinite;
+  box-sizing: border-box;
 }
 
 @keyframes float {
@@ -164,11 +205,18 @@
 .features-section {
   padding: 5rem 2rem;
   background: rgba(255, 255, 255, 0.02);
+  /* RESPONSIVE FIXES */
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  /* RESPONSIVE FIXES */
+  width: 100%;
+  padding: 0 1rem;
 }
 
 .section-title {
@@ -177,12 +225,15 @@
   text-align: center;
   margin-bottom: 3rem;
   color: white;
+  word-break: break-word; /* Prevent overflow */
 }
 
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .feature-card {
@@ -193,7 +244,11 @@
   padding: 2rem;
   text-align: center;
   transition: all 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
+
 .feature-card:hover {
   transform: translateY(-5px);
   background: rgba(255, 255, 255, 0.1);
@@ -216,6 +271,7 @@
   color: white;
   margin-bottom: 1rem;
 }
+
 .feature-description {
   color: #a0a0a0;
   line-height: 1.6;
@@ -223,15 +279,20 @@
 }
 
 /* HOW IT WORKS SECTION - PROCESS EXPLANATION */
-
 .how-it-works-section {
   padding: 5rem 2rem;
+  /* RESPONSIVE FIXES */
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 .steps-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .step {
@@ -256,6 +317,7 @@
 
 .step-content {
   flex: 1;
+  min-width: 0; /* Allow text to wrap */
 }
 
 .step-title {
@@ -265,23 +327,28 @@
   margin-bottom: 0.5rem;
 }
 
-
 .step-description {
   color: #a0a0a0;
   line-height: 1.5;
+  word-break: break-word; /* Prevent overflow */
 }
 
 /* STATISTICS SECTION - PLATFORM METRICS */
-
 .stats-section {
   padding: 3rem 2rem;
   background: rgba(0, 212, 255, 0.05);
+  /* RESPONSIVE FIXES */
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .stat-card {
@@ -291,6 +358,9 @@
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .stat-card:hover {
@@ -314,10 +384,18 @@
 .cta-section {
   padding: 5rem 2rem;
   text-align: center;
+  /* RESPONSIVE FIXES */
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
 }
+
 .cta-content {
   max-width: 600px;
   margin: 0 auto;
+  /* RESPONSIVE FIXES */
+  width: 100%;
+  padding: 0 1rem;
 }
 
 .cta-title {
@@ -325,6 +403,7 @@
   font-weight: 700;
   color: white;
   margin-bottom: 1rem;
+  word-break: break-word; /* Prevent overflow */
 }
 
 .cta-description {
@@ -332,6 +411,7 @@
   color: #a0a0a0;
   margin-bottom: 2rem;
   line-height: 1.6;
+  word-break: break-word; /* Prevent overflow */
 }
 
 .cta-btn {
@@ -348,13 +428,17 @@
   gap: 0.5rem;
   transition: all 0.3s ease;
   box-shadow: 0 8px 32px rgba(0, 212, 255, 0.3);
+  box-sizing: border-box;
+  white-space: nowrap;
 }
+
 .cta-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 40px rgba(0, 212, 255, 0.4);
 }
-/* 
-  RESPONSIVE DESIGN - MOBILE OPTIMIZATION
+
+/* RESPONSIVE DESIGN - MOBILE OPTIMIZATION */
+/*
  * Mobile Responsive Breakpoint
  * 
  * Comprehensive mobile optimization that ensures excellent experience
@@ -369,30 +453,151 @@
  * - Reduced padding maintains content density
  */
 @media (max-width: 768px) {
+  .hero-section {
+    padding: 1rem;
+    min-height: auto;
+  }
+  
   .hero-content {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 2rem;
+    padding: 0;
   }
- 
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
- 
-  .steps-container {
-    grid-template-columns: 1fr;
-  }
-
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+  
   .hero-title {
     font-size: 2.5rem;
   }
   
- 
   .hero-buttons {
     flex-direction: column;
     align-items: center;
+    width: 100%;
+  }
+  
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .floating-card {
+    width: 100%;
+    max-width: 280px;
+    padding: 1.5rem;
+  }
+  
+  .features-section,
+  .how-it-works-section,
+  .stats-section,
+  .cta-section {
+    padding: 3rem 1rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+ 
+  .steps-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .cta-title {
+    font-size: 2rem;
+  }
+  
+  .cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .cta-title {
+    font-size: 1.75rem;
+  }
+  
+  .cta-description {
+    font-size: 1rem;
+  }
+  
+  .primary-btn,
+  .secondary-btn,
+  .cta-btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .floating-card {
+    max-width: 260px;
+    padding: 1rem;
+  }
+  
+  .feature-card {
+    padding: 1.5rem;
+  }
+  
+  .stat-card {
+    padding: 1.5rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+}
+
+/* Landscape phone orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero-section {
+    min-height: auto;
+    padding: 2rem 1rem;
+  }
+  
+  .hero-content {
+    gap: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Large screens optimization */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+  
+  .hero-content {
+    max-width: 1200px;
   }
 }

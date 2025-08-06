@@ -1,22 +1,25 @@
-/* 
+/**
  * Navbar.css - STYLES FOR TOP NAVIGATION & WALLET INTEGRATION
  * 
- *
  * DESCRIPTION:
  * This stylesheet defines the layout, theme, and interactive states for the top
  * navigation bar used in the ClearSwap DeFi dApp. It is fully responsive, modern,
  * and integrates smooth UI elements optimized for Web3 UX.
- *
+ * 
  * RESPONSIVE: Yes (mobile-friendly @768px breakpoint)
  * STYLING PARADIGM: Glassmorphism + Gradient Theming
  * SCOPED COMPONENTS: .navbar, .logo, .nav-links, .connect-btn, .disconnect-btn, etc.
- *
  * 
  */
 
-/* 
+/* GLOBAL RESPONSIVE FOUNDATION */
+* {
+  box-sizing: border-box;
+}
+
+/*
    NAVBAR CONTAINER - Sticky Header with Glassmorphism
-   */
+ */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -28,6 +31,11 @@
   position: sticky;
   top: 0;
   z-index: 1000;                          /* stays above all content */
+  /* RESPONSIVE FIXES */
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 /* Optional text styling utility class */
@@ -36,9 +44,9 @@
   background-clip: text;
 }
 
-/* 
+/*
    LOGO SECTION - Brand icon & gradient-styled text
-  */
+ */
 .logo {
   display: flex;
   align-items: center;
@@ -53,6 +61,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 .logo-text {
@@ -63,11 +72,12 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
-/* 
+/*
    NAVIGATION LINKS
-    */
+ */
 .nav-links {
   display: flex;
   list-style: none;
@@ -86,6 +96,8 @@
   padding: 0.5rem 1rem;
   border-radius: 8px;
   transition: all 0.3s ease;
+  white-space: nowrap; /* Prevent text wrapping */
+  box-sizing: border-box;
 }
 
 .nav-link:hover {
@@ -93,13 +105,14 @@
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* 
+/*
    WALLET SECTION
-    */
+ */
 .wallet-connected {
   display: flex;
   gap: 1rem;
   align-items: center;
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 /* Wallet connect button */
@@ -117,6 +130,8 @@
   gap: 0.5rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
+  white-space: nowrap; /* Prevent text wrapping */
+  box-sizing: border-box;
 }
 
 .connect-btn:hover {
@@ -135,6 +150,8 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  white-space: nowrap; /* Prevent text wrapping */
+  box-sizing: border-box;
 }
 
 .disconnect-btn:hover {
@@ -152,6 +169,8 @@
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
+  white-space: nowrap; /* Prevent text wrapping */
+  box-sizing: border-box;
 }
 
 .back-to-landing-btn:hover {
@@ -159,15 +178,69 @@
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* 
+/*
    RESPONSIVE DESIGN - Mobile First Adjustments
-    */
+ */
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem;
+    flex-wrap: nowrap; /* Prevent wrapping */
   }
-
+  
   .nav-links {
     display: none; /* Hide links for mobile - could use a hamburger later */
+  }
+  
+  .logo-text {
+    font-size: 1.2rem; /* Smaller logo text */
+  }
+  
+  .connect-btn,
+  .disconnect-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .wallet-connected {
+    gap: 0.5rem;
+  }
+  
+  .back-to-landing-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.75rem;
+  }
+  
+  .logo-text {
+    font-size: 1rem;
+  }
+  
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .connect-btn,
+  .disconnect-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  .back-to-landing-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Landscape phone orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .navbar {
+    padding: 0.75rem 1rem;
   }
 }
