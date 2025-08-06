@@ -1,15 +1,15 @@
-# ClearSwap 🌟
+# ClearSwap 
 ### Transparent, Fast & Fair Token Swaps on Soroban
 
 [![Demo Video](https://img.shields.io/badge/Demo-Watch%20Video-blue?style=for-the-badge&logo=youtube)](YOUR_DEMO_VIDEO_LINK)
 [![Live Demo](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge&logo=vercel)](YOUR_LIVE_DEMO_LINK)
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/yourusername/clearswap)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/Alouzious/clearswap)
 
-## 🚀 Overview
+##  Overview
 
 ClearSwap revolutionizes decentralized token swapping by providing **100% transparent pricing** with **lightning-fast execution** on Stellar's Soroban platform. Built for the Stellar Soroban Hackathon, it addresses the core pain points of modern DEX trading: hidden fees, slow confirmations, and poor user experience.
 
-**🎯 Key Innovation**: First-ever swap interface that shows complete fee breakdown, price impact, and minimum received amounts BEFORE trade execution, eliminating surprises and building user trust.
+** Key Innovation**: First-ever swap interface that shows complete fee breakdown, price impact, and minimum received amounts BEFORE trade execution, eliminating surprises and building user trust.
 
 ## 📁 Project Structure
 
@@ -38,7 +38,7 @@ ClearSwap1234/
     └── .gitignore                  # Git ignore rules
 ```
 
-## 🔥 The Problem We Solve
+##  The Problem We Solve
 
 Traditional DEXs suffer from:
 - ❌ **Hidden Fees**: Users discover costs only after transaction execution
@@ -47,14 +47,14 @@ Traditional DEXs suffer from:
 - ❌ **Complex UX**: Confusing interfaces deter mainstream adoption
 - ❌ **Poor Mobile Experience**: Desktop-first designs ignore mobile users
 
-## ✨ Our Solution
+##  Our Solution
 
 ClearSwap delivers:
-- ✅ **Full Transparency**: Complete breakdown of fees, slippage, and minimum received
-- ✅ **Ultra-Low Fees**: ~$0.001 average transaction cost on Soroban
-- ✅ **Lightning Speed**: ~3 second settlement times
-- ✅ **Intuitive Design**: One-screen workflow optimized for mobile-first usage
-- ✅ **Smart Aggregation**: Best execution across multiple liquidity pools
+-  **Full Transparency**: Complete breakdown of fees, slippage, and minimum received
+-  **Ultra-Low Fees**: ~$0.001 average transaction cost on Soroban
+-  **Lightning Speed**: ~3 second settlement times
+-  **Intuitive Design**: One-screen workflow optimized for mobile-first usage
+-  **Smart Aggregation**: Best execution across multiple liquidity pools
 
 ## 🏗️ Technical Architecture
 
@@ -140,45 +140,45 @@ const formatAmount = (amount, decimals = 7) => {
 }
 ```
 
-## 🎯 Core Features Implementation
+##  Core Features Implementation
 
-### **💎 Full Transparency Engine**
+### ** Full Transparency Engine**
 **File**: `src/Pages/Home.jsx` (Lines 180-210)
 - Real-time price impact calculation
 - Minimum received guarantees  
 - Network fee estimation
 - Complete slippage breakdown
 
-### **⚡ Lightning Fast Execution**
+### ** Lightning Fast Execution**
 **File**: `src/Pages/Home.jsx` (Lines 140-170)
 - Soroban smart contract integration
 - ~3 second settlement times
 - Optimistic UI updates
 
-### **💰 Multi-Protocol Aggregation**
+### ** Multi-Protocol Aggregation**
 **File**: `src/Pages/Home.jsx` (Lines 110-140)
 - Routes across SoroSwap, Phoenix, Aqua, SDEX
 - Best rate discovery
 - Liquidity optimization
 
-### **📱 Mobile-First Interface**
+### ** Mobile-First Interface**
 **Files**: `src/Pages/Home.css`, `src/App.css`
 - Touch-optimized controls
 - Responsive grid layouts
 - Progressive Web App ready
 
-### **🔒 Secure Wallet Integration**
+### ** Secure Wallet Integration**
 **File**: `src/components/Navbar.jsx`
 - Non-custodial architecture
 - Multi-wallet support (Freighter, Albedo)
 - Secure key management
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
-- Node.js 18+
-- npm or yarn
-- Freighter or Albedo wallet
+- React.js 
+- npm 
+- Albedo wallet
 - Stellar testnet XLM
 
 ### Installation
@@ -264,7 +264,7 @@ src/reportWebVitals.js    # Performance monitoring
 - ✅ Screen reader compatible
 - ✅ High contrast support
 
-## 🏆 Competitive Advantages
+##  Competitive Advantages
 
 ### vs Ethereum DEXs (Uniswap, SushiSwap)
 | Metric | ClearSwap | Ethereum DEXs |
@@ -280,7 +280,7 @@ src/reportWebVitals.js    # Performance monitoring
 - **Mobile-First Design**: Touch-optimized vs desktop-only
 - **Developer Experience**: Clean, documented codebase
 
-## 📊 Market Impact & Success Metrics
+##  Market Impact & Success Metrics
 
 ### Technical Metrics
 - **Bundle Size**: <500KB gzipped
@@ -294,7 +294,7 @@ src/reportWebVitals.js    # Performance monitoring
 - **User Retention**: Target 60%+ weekly active
 - **Transaction Volume**: $1M+ monthly target
 
-## 🔮 Technical Roadmap
+##  Technical Roadmap
 
 ### Phase 1: Core Platform ✅
 - [x] React 19 frontend with responsive design
@@ -304,20 +304,20 @@ src/reportWebVitals.js    # Performance monitoring
 - [x] Transparent pricing display
 - [x] Mobile-optimized interface
 
-### Phase 2: Advanced Features 🚧
+### Phase 2: Advanced Features 
 - [ ] Limit order functionality
 - [ ] Portfolio tracking dashboard
 - [ ] Advanced charting integration
 - [ ] Transaction history
 - [ ] Price alerts
 
-### Phase 3: Ecosystem Integration 📋
+### Phase 3: Ecosystem Integration 
 - [ ] Cross-chain bridge integration
 - [ ] Yield farming pools
 - [ ] Governance token launch
 - [ ] API for third-party developers
 
-## 👨‍💻 Developer Information
+##  Developer Information
 
 ### Code Quality Standards
 - **ESLint**: Airbnb configuration
@@ -351,7 +351,7 @@ const API_BASE_URL = 'https://soroswap-api-staging-436722401508.us-central1.run.
 const API_KEY = 'sk_e2acb3e0b5248f286023ef7ce9a5cde7e087c12579ae85fb3e9e318aeb11c6ce';
 ```
 
-## 🏅 Hackathon Submission Checklist
+##  Hackathon Submission Checklist
 
 ### Technical Innovation (25%) ✅
 - [x] **Novel Transparency Engine**: First DEX with complete pre-trade fee breakdown
@@ -418,18 +418,18 @@ const API_KEY = 'sk_e2acb3e0b5248f286023ef7ce9a5cde7e087c12579ae85fb3e9e318aeb11
 **Replace these with your actual links:**
 
 - **🌐 Live Demo**: [https://clearswap.vercel.app](YOUR_LIVE_DEMO_LINK)
-- **📱 GitHub Repository**: [https://github.com/yourusername/clearswap](https://github.com/yourusername/clearswap)
-- **📊 Stellar Expert**: [Contract Address](YOUR_STELLAR_EXPERT_LINK)
+-**📱 GitHub Repository**: [https://github.com/Alouzious/clearswap](https://github.com/Alouzious/clearswap)
+- ****📊 Stellar Expert**: Using SoroSwap API (no custom contract deployed)
 - **🎥 Demo Video**: [https://youtube.com/watch?v=your-demo](YOUR_DEMO_VIDEO_LINK)
 
 ### Contact Information
 - **Email**: alouzious@gmail.com
-- **Twitter**: [@YourTwitter](https://twitter.com/yourtwitter)  
-- **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- **Telegram**: @YourTelegram
+- **Twitter**: [@alouzious](https://twitter.com/alouzious)  
+- **LinkedIn**: [@alouzious](https://linkedin.com/in/alouzious-muhereza-89116b328)
+- **Telegram**: @alouzious
 
 
-**🏆 Built for Stellar Soroban Hackathon 2025**
+** Built for Stellar Hacks  Swaps and Vaults with PaltaLabs 2025**
 
 *"Making DeFi transparent, fast, and accessible for everyone"*
 
