@@ -1,3 +1,10 @@
+/**
+ * Home.css - ADVANCED DEFI SWAP INTERFACE STYLES
+ * STELLAR HACKATHON SUBMISSION - ClearSwap DeFi Application
+ * Modern glassmorphism, responsive, accessible, dark theme optimized.
+ */
+
+/* Core layout */
 .home-container {
   min-height: calc(100vh - 80px);
   display: flex;
@@ -6,6 +13,7 @@
   padding: 2rem;
 }
 
+/* Wallet connection */
 .connection-required {
   display: flex;
   align-items: center;
@@ -54,6 +62,7 @@
   box-shadow: 0 6px 25px rgba(0, 212, 255, 0.4);
 }
 
+/* Swap interface */
 .swap-container {
   width: 100%;
   max-width: 480px;
@@ -97,6 +106,7 @@
   color: white;
 }
 
+/* Status messages */
 .error {
   background: rgba(255, 71, 87, 0.1);
   border: 1px solid rgba(255, 71, 87, 0.3);
@@ -132,6 +142,7 @@
   to { transform: rotate(360deg); }
 }
 
+/* Token input cards */
 .token-card {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
@@ -212,16 +223,13 @@
   align-items: center;
 }
 
-.token-name {
-  color: #a0a0a0;
-  font-size: 0.9rem;
-}
-
+.token-name,
 .balance {
   color: #a0a0a0;
   font-size: 0.9rem;
 }
 
+/* Swap direction */
 .swap-button-container {
   display: flex;
   justify-content: center;
@@ -249,6 +257,7 @@
   transform: rotate(180deg);
 }
 
+/* Output amount */
 .output-amount {
   flex: 1;
   color: white;
@@ -259,6 +268,7 @@
   align-items: center;
 }
 
+/* Quote details */
 .quote-details {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
@@ -286,6 +296,7 @@
   text-transform: capitalize;
 }
 
+/* Action buttons */
 .action-buttons {
   display: flex;
   flex-direction: column;
@@ -346,6 +357,7 @@
   cursor: not-allowed;
 }
 
+/* Platform stats */
 .stats-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -380,6 +392,7 @@
   font-weight: 500;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .home-container {
     padding: 1rem;

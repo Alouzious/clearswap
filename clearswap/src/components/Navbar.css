@@ -1,20 +1,44 @@
+/* 
+ * Navbar.css - STYLES FOR TOP NAVIGATION & WALLET INTEGRATION
+ * 
+ *
+ * DESCRIPTION:
+ * This stylesheet defines the layout, theme, and interactive states for the top
+ * navigation bar used in the ClearSwap DeFi dApp. It is fully responsive, modern,
+ * and integrates smooth UI elements optimized for Web3 UX.
+ *
+ * RESPONSIVE: Yes (mobile-friendly @768px breakpoint)
+ * STYLING PARADIGM: Glassmorphism + Gradient Theming
+ * SCOPED COMPONENTS: .navbar, .logo, .nav-links, .connect-btn, .disconnect-btn, etc.
+ *
+ * 
+ */
+
+/* 
+   NAVBAR CONTAINER - Sticky Header with Glassmorphism
+   */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.05);  /* semi-transparent background */
+  backdrop-filter: blur(20px);            /* frosted glass effect */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 1000;                          /* stays above all content */
 }
+
+/* Optional text styling utility class */
 .my-class {
   -webkit-background-clip: text;
   background-clip: text;
 }
 
+/* 
+   LOGO SECTION - Brand icon & gradient-styled text
+  */
 .logo {
   display: flex;
   align-items: center;
@@ -34,14 +58,16 @@
 .logo-text {
   font-size: 1.5rem;
   font-weight: 700;
-  color: transparent; 
+  color: transparent;
   background: linear-gradient(135deg, #00d4ff 0%, #ffffff 100%);
   -webkit-background-clip: text;
-  background-clip: text; 
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-
+/* 
+   NAVIGATION LINKS
+    */
 .nav-links {
   display: flex;
   list-style: none;
@@ -57,9 +83,9 @@
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
   padding: 0.5rem 1rem;
   border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .nav-link:hover {
@@ -67,12 +93,16 @@
   background: rgba(255, 255, 255, 0.1);
 }
 
+/* 
+   WALLET SECTION
+    */
 .wallet-connected {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
 
+/* Wallet connect button */
 .connect-btn {
   background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
   border: none;
@@ -94,6 +124,7 @@
   box-shadow: 0 6px 25px rgba(0, 212, 255, 0.4);
 }
 
+/* Wallet disconnect button */
 .disconnect-btn {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -110,6 +141,7 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
+/* Back to Home from Swap */
 .back-to-landing-btn {
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -127,12 +159,15 @@
   background: rgba(255, 255, 255, 0.1);
 }
 
+/* 
+   RESPONSIVE DESIGN - Mobile First Adjustments
+    */
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem;
   }
-  
+
   .nav-links {
-    display: none;
+    display: none; /* Hide links for mobile - could use a hamburger later */
   }
 }
