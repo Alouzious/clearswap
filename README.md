@@ -1,7 +1,7 @@
 # ClearSwap 
 ### Transparent, Fast & Fair Token Swaps on Soroban
 
-[![Demo Video](https://img.shields.io/badge/Demo-Watch%20Video-blue?style=for-the-badge&logo=youtube)](YOUR_DEMO_VIDEO_LINK)
+[![Demo Video](https://img.shields.io/badge/Demo-Watch%20Video-blue?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=E8jigiwtVHM)
 [![Live Demo](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge&logo=vercel)](https://clearswap.vercel.app)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/Alouzious/clearswap)
 
@@ -419,7 +419,7 @@ const API_KEY = 'sk_e2acb3e0b5248f286023ef7ce9a5cde7e087c12579ae85fb3e9e318aeb11
 - **Live Demo**: [https://clearswap.vercel.app](https://clearswap.vercel.app)
 -** GitHub Repository**: [https://github.com/Alouzious/clearswap](https://github.com/Alouzious/clearswap)
 -** Stellar Expert**: Using SoroSwap API (no custom contract deployed)
--** Demo Video**: [https://youtube.com/watch?v=your-demo](YOUR_DEMO_VIDEO_LINK)
+-** Demo Video**: [https://www.youtube.com/watch?v=E8jigiwtVHM])
 
 ### Contact Information
 - **Email**: alouzious@gmail.com
